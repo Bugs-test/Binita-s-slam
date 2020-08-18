@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>The list of people Binita never wants to forget - EVER </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th>Whatsapp</th>
+      <th>Email</th>
+      <th>Follow</th>
+      <th>Memory</th>
+      <th>Quote</th>
+      <th>Thoughts</th>
+      <th>Picture</th>
+      <th colspan="10"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @slambinita.each do |slambinitum| %>
+      <tr>
+        <td><%= slambinitum.name %></td>
+        <td><%= slambinitum.birthday %></td>
+        <td><%= slambinitum.whatsapp %></td>
+        <td><%= slambinitum.email %></td>
+        <td><%= slambinitum.follow %></td>
+        <td><%= slambinitum.memory %></td>
+        <td><%= slambinitum.quote %></td>
+        <td><%= slambinitum.thoughts %></td>
+        <td><%= image_tag slambinitum.picture_url, width: '100%' if slambinitum.picture.present? %></td>
+        <td><%= link_to 'Show', slambinitum %></td>
+        <td><%= link_to 'Edit', edit_slambinitum_path(slambinitum) %></td>
+        <td><%= link_to 'Destroy', slambinitum, method: :delete, data: { confirm: 'Are you sure? THESE ARE MEMORIES YOU ARE DESTROYING!!' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Slambinitum', new_slambinitum_path %>

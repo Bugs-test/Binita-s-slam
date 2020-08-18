@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Binita&apos;s Slam Book</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <footer>
+  <div class="container">
+    <div style="width: 90%; height: 20px; float: left; "> 
+    <a href="/wows">Binita loves you ❤️</a>
+    </div>
+    <div style="margin-left: 10%; height: 20px; "> 
+      <%= Time.now.day %>/<%= Time.now.month %>/<%= Time.now.year %>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="/slambinita">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Binita&apos;s Slam Book&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/pages/info">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Why am I asking you to fill this up? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/slambinita/new">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you my bud? Then fill this up</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  </nav>
+  <div class="container">
+    <%= yield %>
+  </div>
+  </body>
+</html>

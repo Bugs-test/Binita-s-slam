@@ -1,0 +1,62 @@
+<%= form_with(model: slambinitum, local: true) do |form| %>
+  <% if slambinitum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(slambinitum.errors.count, "error") %> prohibited this slambinitum from being saved:</h2>
+
+      <ul>
+        <% slambinitum.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthday %>
+    <%= form.text_field :birthday %>
+  </div>
+
+  <div class="field">
+    <%= form.label :whatsapp %>
+    <%= form.text_field :whatsapp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :follow %>
+    <%= form.text_area :follow %>
+  </div>
+
+  <div class="field">
+    <%= form.label :memory %>
+    <%= form.text_area :memory %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quote %>
+    <%= form.text_area :quote %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thoughts %>
+    <%= form.text_area :thoughts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.file_field :picture %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @slambinitum.name %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @slambinitum.birthday %>
+</p>
+
+<p>
+  <strong>Whatsapp:</strong>
+  <%= @slambinitum.whatsapp %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @slambinitum.email %>
+</p>
+
+<p>
+  <strong>Follow me on Insta/FB:</strong>
+  <%= @slambinitum.follow %>
+</p>
+
+<p>
+  <strong>Memory:</strong>
+  <%= @slambinitum.memory %>
+</p>
+
+<p>
+  <strong>Quote:</strong>
+  <%= @slambinitum.quote %>
+</p>
+
+<p>
+  <strong>Thoughts:</strong>
+  <%= @slambinitum.thoughts %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@slambinitum.picture_url, width: 600) if @slambinitum.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_slambinitum_path(@slambinitum) %> |
+<%= link_to 'Back', slambinita_path %>
